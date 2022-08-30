@@ -1,0 +1,186 @@
+/* Llamar a una fuente desde Google FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&family=Sofia&display=swap');
+
+
+.imagenes-restaurantes {
+  width: 300px;
+  height: 300px;
+  object-fit: cover
+}
+
+.imagenes-galeria {
+  width: 330px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.banner {
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+}
+
+ .btn1{
+  background-color: #1c1e1f !important;
+ }
+
+/* Mejorado el invocar una imagen de fondo con opacidad */
+.fondo {
+  z-index: -9;
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 20%;
+}
+
+/* Uso de important para sobrepasar los lineamientos establecidos por default gracias a Bootstrap */
+
+.mt-0 {
+  margin-top: 30px !important;
+}
+
+.ms-1{
+  margin-left: 26vw !important;
+}
+
+.card-width {
+  width: 330px !important;
+}
+
+.card-title-size {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 330px !important;
+  height: 33px !important;
+}
+
+.reset-padding {
+  padding: 0 !important;
+}
+
+
+/* Hover para las imagenes en la galería */
+.container-fade {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container-fade:hover .image {
+  opacity: 0.3;
+}
+
+.container-fade:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #04AA6D;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+header {
+  background-color: #667934 !important;
+}
+
+footer {
+  background-color: #667934 !important;
+}
+
+.button-color {
+  background-color: #667934;
+  color: white;
+}
+
+.card-color {
+  background-color: #667934 !important;
+}
+
+/* Asigno MaxWidth para que la Card se vea mejor en menores a 768px */
+@media only screen and (max-width: 768px) {
+  .maxwd {
+    width: 75% !important;
+    margin-left: 4em;
+  }
+
+  /* Un intento experimental de poner la barra de filtros de búsqueda arriba cuando la pantalla sea menor a 768 */
+  .reposition-aside:nth-of-type(1) {
+    order: 1;
+  }
+
+  .reposition-aside:nth-of-type(2) {
+    order: 2;
+  }
+
+}
+
+.teste{
+  
+width: 100px;
+}
+
+.button-nav {
+  display: inline-block;
+  font-family: poppins;
+  border-radius: 4px;
+  background-color: #667934;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 5px;
+  width: auto;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button-nav span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-nav span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button-nav:hover span {
+  padding-right: 25px;
+}
+
+.button-nav:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
